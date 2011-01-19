@@ -57,10 +57,8 @@ div.field, div.actions {
 
 #center_div{
 	text-align: center;	
-	font-size:12pt;
-	background-image:url(http://www.qworky.com/wp-content/themes/starkers/images/top-bg.png);
     clear: both;
-    height: 360px;
+    min-height: 100px;
     overflow: auto;
     padding: 0 0 28px;
     position: relative;
@@ -68,8 +66,8 @@ div.field, div.actions {
 }
 
 #tem{
-	
-
+	font-size:20pt;
+	line-height:150%;
 }
 
 #vote{
@@ -80,7 +78,8 @@ div.field, div.actions {
 {
 	margin: 50px 50px 50px 50px;
 	padding: 5px 5px 5px 5px;
-	/*background-color: #FFFFDD;*/
+	background-color: #FFFFFF;
+	/*background-image:url(http://www.qworky.com/wp-content/themes/starkers/images/top-bg.png);*
 }
 
 #illustration{
