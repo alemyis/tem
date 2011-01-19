@@ -1,0 +1,59 @@
+<table>
+  <tr>
+    <th><%= Lookup.find_by_key("teret").value %></th>
+    <th><%= Lookup.find_by_key("misale").value %></th>
+    <th>Ye</th>
+    <th>Ne</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tems.each do |tem| %>
+  <tr>
+    <td><%= tem.teret %></td>
+    <td><%= tem.misale %></td>
+    <td><%= tem.ye %></td>
+    <td><%= tem.ne %></td>
+    <td><%= link_to 'Show', tem %></td>
+    <td><%= link_to 'Edit', edit_tem_path(tem) %></td>
+    <td><%= link_to 'Destroy', tem, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<% @tems.each do |tem| %>
+	<div id="center_div">
+		<dir id="vote">
+			<p>
+			  <b>Ye:</b>
+			  <%= tem.ye %>
+			</p>
+			
+			<p>
+			  <b>Ne:</b>
+			  <%= tem.ne %>
+			</p>
+		</dir>
+		<div id="tem">
+			<p>
+			  <%= tem.teret %>
+			</p>
+			
+			<p>
+			  <%= tem.misale %>
+			</p>
+			<div id="illustration">
+			  <% if (tem.illustration.present?) %>
+			  	<%= image_tag(tem.illustration, :alt => "", :width => "150" ) %>
+			  <% end %>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<%= will_paginate @tems %>
+<br />
+
+<%= link_to Lookup.find_by_key("newtem").value, new_tem_path %>

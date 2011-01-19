@@ -1,0 +1,29 @@
+<h1>Listing tems</h1>
+
+<table>
+  <tr>
+    <th><%= Lookup.find_by_key("teret").value %></th>
+    <th><%= Lookup.find_by_key("misale").value %></th>
+    <th>Ye</th>
+    <th>Ne</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tems.each do |tem| %>
+  <tr>
+    <td><%= tem.teret %></td>
+    <td><%= tem.misale %></td>
+    <td><%= tem.ye %></td>
+    <td><%= tem.ne %></td>
+    <td><%= link_to 'Show', tem %></td>
+    <td><%= link_to 'Edit', edit_tem_path(tem) %></td>
+    <td><%= link_to 'Destroy', tem, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tem', new_tem_path %>

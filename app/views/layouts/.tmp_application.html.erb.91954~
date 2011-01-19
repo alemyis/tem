@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proverb</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+        <script type="text/javascript">
+            <!--
+            function reDo(){
+                top.location.reload();
+            }
+            
+            if (navigator.appName == 'Netscape' && parseInt(navigator.appVersion) < 5) {
+                top.onresize = reDo;
+            }
+            dom = document.getElementById
+            //-->
+        </script>
+        <script type='text/javascript'>
+            (function(){
+                var kmwProtocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+                document.writeln(unescape("%3Cscript src='" + kmwProtocol +
+                "r.keymanweb.com/code/?domain=" +
+                location.hostname +
+                "&amp;id=383&amp;page=" +
+                encodeURIComponent(location.pathname) +
+                "' type='text/javascript' %3E%3C/script%3E"));
+            })();
+        </script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

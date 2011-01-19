@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  teret: MyString
+  misale: MyString
+  ye: 1
+  ne: 1
+
+two:
+  teret: MyString
+  misale: MyString
+  ye: 1
+  ne: 1
