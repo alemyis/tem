@@ -98,9 +98,11 @@ div.field, div.actions {
 
 #voteye{
 	width:15px;
+	cursor: hand;
 }
 #votene{
 	width:15px;
+	cursor: hand;
 }
 
 #necount{
@@ -115,4 +117,13 @@ div.field, div.actions {
 
 #yenediff{
 	font-size:x-large;
+}
+
+#bellowThefold{
+	font-size:10px;	
+	margin: 50px 50px 50px 50px;
+}
+
+.paginationHouse{
+	text-align:center;
 }

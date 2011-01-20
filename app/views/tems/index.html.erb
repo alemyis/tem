@@ -1,12 +1,13 @@
 
+<div class='paginationHouse'><%= will_paginate @tems %></div>
+
 <div style="float:right">
 	<%= link_to Lookup.find_by_key("newtem").value, new_tem_path %>
 </div>	
-	
-<%= will_paginate @tems %>
+
 <br/>
 <% @tems.each do |tem| %>
 	<%= render :partial => "read", :locals => { :tem => tem } %>
 <% end %>
-<%= will_paginate @tems %>
+<div class='paginationHouse'><%= will_paginate @tems %></div>
 <br />

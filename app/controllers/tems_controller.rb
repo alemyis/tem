@@ -40,7 +40,9 @@ class TemsController < ApplicationController
   # POST /tems.xml
   def create
     @tem = Tem.new(params[:tem])
-
+    @tem.ye = 0
+    @tem.ne = 0
+    
     respond_to do |format|
       if @tem.save
         format.html { redirect_to(@tem, :notice => 'Tem was successfully created.') }

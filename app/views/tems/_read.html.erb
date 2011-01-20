@@ -47,7 +47,6 @@
 			<td>
 				<div id="tem">
 					  <%= tem.teret %>
-					<br/>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<div id="knowtheend">
 						?
@@ -66,17 +65,20 @@
 			</td>
 		</tr>
 	</table>
+	<div style="float:right;">
+	<%= link_to Lookup.find_by_key("edit").value, edit_tem_path(tem) %>
+	</div>
 					<script type='text/javascript'>
 					$('#knowtheend').click(function() {
 						
 						// third fade in the illustration next
 						function fadeinIllustration(){
-							$('#illustration').fadeIn(500);
+							$('#illustration').fadeIn(100);
 					    }
 						  
 						// second fade in the misale
 						function fadeinMisale() {
-					      	$('#misale').fadeIn(500);
+					      	$('#misale').fadeIn(100);
 						}
 						
 						function fadeinAnswer(){
