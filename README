@@ -1,5 +1,5 @@
 
-rails g scaffold tem teret:string misale:string illustration:string ye:integer ne:integer 
+rails g scaffold tem teret:string misale:string illustration:string tag:string ye:integer ne:integer 
 rails g scaffold lookup key:string value:string
 
 

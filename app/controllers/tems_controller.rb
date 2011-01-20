@@ -51,6 +51,33 @@ class TemsController < ApplicationController
       end
     end
   end
+  
+  # PUT /items/1
+  def voteye
+    @tem = Tem.find(params[:id])
+    
+    @tem.voteye
+    
+    @tem.save
+    
+    respond_to do |format|
+      format.html { render :json => {:ye => @tem.ye, :ne => @tem.ne, :diff => @tem.ye - @tem.ne} }
+      format.json { render :json => {:ye => @tem.ye, :ne => @tem.ne, :diff => @tem.ye - @tem.ne} }
+    end
+  end
+  
+  def votene
+    @tem = Tem.find(params[:id])
+    
+    @tem.votene
+    
+    @tem.save
+    
+    respond_to do |format|
+      format.html { render :json => {:ye => @tem.ye, :ne => @tem.ne, :diff => @tem.ye - @tem.ne} }
+      format.json { render :json => {:ye => @tem.ye, :ne => @tem.ne, :diff => @tem.ye - @tem.ne} }
+    end
+  end
 
   # PUT /tems/1
   # PUT /tems/1.xml

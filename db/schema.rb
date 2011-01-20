@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110119065430) do
+ActiveRecord::Schema.define(:version => 20110119215408) do
 
   create_table "lookups", :force => true do |t|
     t.string   "key"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20110119065430) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "illustration"
+    t.string   "Tag"
   end
 
 end

@@ -2,6 +2,18 @@ Proverb::Application.routes.draw do
   resources :lookups
 
   resources :tems
+  
+  resources :tems do
+    member do
+      post 'voteye'
+      get 'voteye'
+    end
+    member do
+      post 'votene'
+      get 'votene'
+    end
+  end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

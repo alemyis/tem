@@ -6,38 +6,7 @@
 <%= will_paginate @tems %>
 <br/>
 <% @tems.each do |tem| %>
-	<div id="center_div">
-		<table width="80%">
-			<tr>
-				<td>
-					<dir id="vote">
-						<p>
-						  <span style="writing-mode: tb;">></span>
-						  <%= tem.ye %>
-						</p>
-						<p>
-						  <span style="writing-mode: tb;"><</span>
-						  <%= tem.ne %>
-						</p>
-					</dir>	
-				</td>
-				<td>
-					<div id="tem">
-						  <%= tem.teret %>
-						<br/>
-						  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= tem.misale %>
-					</div>
-				</td>
-				<td>
-					<div id="illustration">
-					  <% if (tem.illustration.present?) %>
-					  	<%= image_tag(tem.illustration, :alt => "", :width => "150" ) %>
-					  <% end %>
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
+	<%= render :partial => "read", :locals => { :tem => tem } %>
 <% end %>
 <%= will_paginate @tems %>
 <br />

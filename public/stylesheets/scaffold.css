@@ -79,9 +79,40 @@ div.field, div.actions {
 	margin: 50px 50px 50px 50px;
 	padding: 5px 5px 5px 5px;
 	background-color: #FFFFFF;
-	/*background-image:url(http://www.qworky.com/wp-content/themes/starkers/images/top-bg.png);*
+	/*background-image:url(http://www.qworky.com/wp-content/themes/starkers/images/top-bg.png);*/
 }
 
 #illustration{
 	/*float:right;*/
+	display: none;
+}
+
+#misale{
+	display: none;
+}
+
+#knowtheend{
+	background-color:#FFFFDD;
+	font-size:20pt;
+}
+
+#voteye{
+	width:15px;
+}
+#votene{
+	width:15px;
+}
+
+#necount{
+	font-size:7px;
+	display:none;
+}
+
+#yecount{
+	font-size:7px;
+	display:none;
+}
+
+#yenediff{
+	font-size:x-large;
 }
