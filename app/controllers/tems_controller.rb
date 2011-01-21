@@ -2,7 +2,8 @@ class TemsController < ApplicationController
   # GET /tems
   # GET /tems.xml
   def index
-    @tems = Tem.all.paginate(:per_page => 1, :page => params[:page])
+    @page_size = params[:size].nil? ? 1 : params[:size].to_i
+    @tems = Tem.all.paginate(:per_page => @page_size, :page => params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @tems }
