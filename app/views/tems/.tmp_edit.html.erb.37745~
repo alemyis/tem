@@ -1,6 +1,0 @@
-<h1>Editing tem</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @tem %> |
-<%= link_to 'Back', tems_path %>

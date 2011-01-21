@@ -1,4 +1,6 @@
 Proverb::Application.routes.draw do
+  match '/' => 'tems#index'
+
   resources :lookups
 
   resources :tems
