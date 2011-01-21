@@ -8,6 +8,14 @@ class TemsController < ApplicationController
       format.xml  { render :xml => @tems }
     end
   end
+  
+  def list
+    @tems = Tem.all
+    respond_to do |format|
+      format.html # list.html.erb
+      format.xml  { render :xml => @tems }
+    end
+  end
 
   # GET /tems/1
   # GET /tems/1.xml

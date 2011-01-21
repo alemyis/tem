@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <th>Teret</th>
+    <th>Misale</th>
+    <th>Ye</th>
+    <th>Ne</th>
+    <th>Created</th>
+    <th>Updated</th>
+    <th>Illustration</th>
+    <th>Tag</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tems.each do |tem| %>
+  <tr>
+    <td><%= tem.teret %></td>
+    <td><%= tem.misale %></td>
+    <td><%= tem.ye %></td>
+    <td><%= tem.ne %></td>
+    <td><%= tem.created_at %></td>
+    <td><%= tem.updated_at %></td>
+    <td><%= tem.illustration %></td>
+    <td><%= tem.Tag %></td>
+    <td><%= link_to 'Show', tem %></td>
+    <td><%= link_to 'Edit', edit_tem_path(tem) %></td>
+    <td><%= link_to 'Destroy', tem, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tem', new_tem_path %>

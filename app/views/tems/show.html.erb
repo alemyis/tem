@@ -1,32 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div id="center_div">
-	<dir id="vote">
-		<p>
-		  <b>Ye:</b>
-		  <%= @tem.ye %>
-		</p>
-		
-		<p>
-		  <b>Ne:</b>
-		  <%= @tem.ne %>
-		</p>
-	</dir>
-	<div id="tem">
-		<p>
-		  <%= @tem.teret %>
-		</p>
-		
-		<p>
-		  <%= @tem.misale %>
-		</p>
-		<div id="illustration">
-		  <% if (@tem.illustration.present?) %>
-		  	<%= image_tag(@tem.illustration, :alt => "", :width => "150" ) %>
-		  <% end %>
-		</div>
-	</div>
-</div>
+<%= render :partial => "read", :locals => { :tem => @tem } %>
 
 <%= link_to 'Edit', edit_tem_path(@tem) %> |
 <%= link_to 'Back', tems_path %>
+<%= link_to 'Destroy', @tem, :confirm => 'Are you sure?', :method => :delete %>

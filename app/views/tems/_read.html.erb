@@ -2,66 +2,23 @@
 	<table width="80%">
 		<tr>
 			<td>
-				<dir id="vote">
-					<p>
-					  <img id='voteye' src='/images/ye.gif' width="20px"/>
-					  <script type="text/javascript">
-					  	$('#voteye').click( function(){
-							$.ajax({
-						  		url: '<%= voteye_tem_path (tem) %>',
-								dataType: 'json',
-						  		success: function(data) {
-									$('#yecount').text(data["ye"]);
-									$('#necount').text(data["ne"]);
-									$('#yenediff').text(data["diff"]);
-						  		}
-							});
-						});
-					  	
-					  </script>
-					  <span id='yecount'><%= tem.ye %></span>
-					</p>
-					<p>
-						<span id='yenediff'><%= tem.ye - tem.ne %></span>
-					</p>
-					<p>
-					  <img id='votene' src='/images/ne.gif' width="20px"/>
-					  <script type="text/javascript">
-					  	$('#votene').click( function(){
-							$.ajax({
-						  		url: '<%= votene_tem_path (tem) %>',
-								dataType: 'json',
-						  		success: function(data) {
-									$('#yecount').text(data["ye"]);
-									$('#necount').text(data["ne"]);
-									$('#yenediff').text(data["diff"]);
-						  		}
-							});
-						});
-					  	
-					  </script>
-					  <span id='necount'><%= tem.ne %></span>
-					</p>
-				</dir>	
+				<%= render :partial => "vote", :locals => { :tem => tem } %>
 			</td>
 			<td>
 				<div id="tem">
-					  <%= tem.teret %>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<div id="knowtheend">
-						?
+					<div id="illustration">
+					  <% if (tem.illustration.present?) %>
+					  	<%= image_tag(tem.illustration, :alt => "", :width => "200" ) %>
+					  <% end %>
 					</div>
+					<%= tem.teret %>
+					<div id="knowtheend" onclick='javascript: temReveal(this)'>?</div>
 					<div id="misale">
 					  <%= tem.misale %>
 				  	</div>
 				</div>
 			</td>
 			<td>
-				<div id="illustration">
-				  <% if (tem.illustration.present?) %>
-				  	<%= image_tag(tem.illustration, :alt => "", :width => "150" ) %>
-				  <% end %>
-				</div>
 			</td>
 		</tr>
 	</table>
@@ -69,27 +26,7 @@
 	<%= link_to Lookup.find_by_key("edit").value, edit_tem_path(tem) %>
 	</div>
 					<script type='text/javascript'>
-					$('#knowtheend').click(function() {
-						
-						// third fade in the illustration next
-						function fadeinIllustration(){
-							$('#illustration').fadeIn(100);
-					    }
-						  
-						// second fade in the misale
-						function fadeinMisale() {
-					      	$('#misale').fadeIn(100);
-						}
-						
-						function fadeinAnswer(){
-							fadeinMisale();
-							fadeinIllustration();
-						}
-						  
-						// first fade out knowtheend?
-						$('#knowtheend').fadeOut(500, fadeinAnswer);
-						  
-						  
-					});
+
+//;
 	  				</script>
 </div>

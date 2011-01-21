@@ -3,6 +3,7 @@ Proverb::Application.routes.draw do
 
   resources :lookups
 
+  match '/tems/list' => 'tems#list'
   resources :tems
   
   resources :tems do
@@ -13,6 +14,9 @@ Proverb::Application.routes.draw do
     member do
       post 'votene'
       get 'votene'
+    end
+    member do
+      get 'list'
     end
   end
   

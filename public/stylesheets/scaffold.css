@@ -83,12 +83,13 @@ div.field, div.actions {
 }
 
 #illustration{
-	/*float:right;*/
+	float:right;
 	display: none;
 }
 
 #misale{
 	display: none;
+	padding-left: 20px;
 }
 
 #knowtheend{
@@ -105,17 +106,12 @@ div.field, div.actions {
 	cursor: hand;
 }
 
-#necount{
+.yenecount{
 	font-size:7px;
 	display:none;
 }
 
-#yecount{
-	font-size:7px;
-	display:none;
-}
-
-#yenediff{
+.yenediff{
 	font-size:x-large;
 }
 
