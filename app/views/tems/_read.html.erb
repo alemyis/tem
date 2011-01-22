@@ -1,32 +1,26 @@
 <div id="center_div">
-	<table width="80%">
+	<table width="90%" height='100%'>
 		<tr>
-			<td>
+			<td width="20%" valign='top'>
 				<%= render :partial => "vote", :locals => { :tem => tem } %>
 			</td>
-			<td>
+			<td valign='top'>
 				<div id="tem">
-					<div id="illustration">
-					  <% if (tem.illustration.present?) %>
-					  	<%= image_tag(tem.illustration, :alt => "", :width => "200" ) %>
-					  <% end %>
-					</div>
 					<%= tem.teret %>
 					<div id="knowtheend" onclick='javascript: temReveal(this)'>?</div>
 					<div id="misale">
 					  <%= tem.misale %>
 				  	</div>
+					<div id="illustration">
+					  <% if (tem.illustration.present?) %>
+					  	<%= image_tag(tem.illustration, :alt => "", :width => "300" ) %>
+					  <% end %>
+					</div>
 				</div>
 			</td>
-			<td>
+			<td width='10%' valign='top'>
+				<%= link_to Lookup.find_by_key("edit").value, edit_tem_path(tem) %>
 			</td>
 		</tr>
 	</table>
-	<div style="float:right;">
-	<%= link_to Lookup.find_by_key("edit").value, edit_tem_path(tem) %>
-	</div>
-					<script type='text/javascript'>
-
-//;
-	  				</script>
 </div>

@@ -1,14 +1,14 @@
 <dir id="vote">
-	<p>
-	  <img id='voteye' src='/images/ye.gif' width="20px" 
+	<p id='voteye' >
+	  <img src='/images/ye.png' width="30px" alt="ye-vote"
 	  		onclick="javascript: temVote('<%= voteye_tem_path (tem) %>', '<%= tem.id %>');"/>
 	  <span id='yecount_<%= tem.id %>' class='yenecount'><%= tem.ye %></span>
 	</p>
 	<p>
 		<span id='yenediff_<%= tem.id %>' class='yenediff'><%= tem.ye - tem.ne %></span>
 	</p>
-	<p>
-	  <img id='votene' src='/images/ne.gif' width="20px"
+	<p id='votene'>
+	  <img src='/images/ne.png' width="30px" alt="ne-vote"
 	  		onclick="javascript: temVote('<%= votene_tem_path (tem) %>', '<%= tem.id %>');"/>
 	  <span id='necount_<%= tem.ne %>' class='yenecount'><%= tem.ne %></span>
 	</p>

@@ -1,4 +1,7 @@
-<div style="float:right">
+
+<div class='paginationHouse'><%= will_paginate @tems, :renderer => MyLinkRenderer %></div>
+
+<div id='div_edit'>
 	<%= link_to Lookup.find_by_key("newtem").value, new_tem_path %>
 </div>	
 
@@ -6,5 +9,4 @@
 <% @tems.each do |tem| %>
 	<%= render :partial => "read", :locals => { :tem => tem } %>
 <% end %>
-<div class='paginationHouse'><%= will_paginate @tems %></div>
 <br />
