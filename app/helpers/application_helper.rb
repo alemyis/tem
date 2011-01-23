@@ -18,13 +18,13 @@ class MyLinkRenderer < WillPaginate::ViewHelpers::LinkRenderer
     end
 
     def page_number(page)
-      #unless page == current_page
+      unless page == current_page
         #tag(:span, link(tag(:i, 'O'), page, :title => "Page #{page}", :class => page == current_page ? "current" : nil))
-      #  @template.image_submit_tag "/images/center.png", :title => "Page #{page}", :onclick => "javascript:window.location='#{@template.url_for :page => page}'"
-      #else
+        @template.image_submit_tag "/images/center.png", :title => "Page #{page}", :onclick => "javascript:window.location='#{@template.url_for :page => page}'"
+      else
         #tag(:span, tag(:i, 'O'), :title => "Page #{page}")
-      #  @template.image_submit_tag "/images/center.png", :title => "Page #{page}"
-      #end
+        @template.image_submit_tag "/images/center_current.png", :title => "Page #{page}"
+      end
     end
 
     def previous_page
