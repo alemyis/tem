@@ -33,6 +33,10 @@
 	<div id="main_div">
 		<%= yield %>
 	</div>
+	<% if ( params[:jegol].present? && params[:jegol].to_i == 1 ) %>
+		<br/><br/>
+		<iframe src='http://50.16.134.117/meetings/tem/embedable' width='780px' frameborder='0' height='780px'></iframe>
+	<% end %>
 	<div id="bellowThefold">
 		<strong>FAQ</strong> 
 		<ul>
