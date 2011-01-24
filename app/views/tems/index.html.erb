@@ -1,5 +1,5 @@
 
-<div class='paginationHouse'><%= will_paginate @tems, :renderer => MyLinkRenderer %></div>
+<div class='paginationHouse'><%= will_paginate @tems %></div>
 
 <div id='div_edit'>
 	<%= link_to Lookup.find_by_key("newtem").value, new_tem_path %>
